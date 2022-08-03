@@ -1701,6 +1701,9 @@ body {
   .footer {
     padding: 1.5rem 0;
   }
+  .trial__title::before {
+    display: none;
+  }
 }
 
 @media (max-width: 420px) {
