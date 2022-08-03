@@ -1,0 +1,1370 @@
+@import "reset.scss";
+@import "fonts.scss";
+
+$font-default: "Inter",
+sans-serif;
+
+:root {
+    --var-white-color: #fff;
+    --var-bg-color: #1f1f47;
+    --var-error-color: #EB352D;
+    --var-red-gradient: linear-gradient(330.18deg, #C84E89 -27.91%, #F15F79 101.7%);
+    --var-blue-gradient: linear-gradient(329.79deg, #0052D4 -31.21%, #4364F7 18.94%, #6FB1FC 98.47%);
+    --var-purple-gradient: linear-gradient(151.57deg, #DA22FF 0%, #9733EE 119.33%);
+    --var-button-color: linear-gradient(330.53deg, #D40000 -15.77%, #F76343 28.41%, #FC6F6F 98.47%);
+}
+
+@mixin bor-r {
+    border-radius: 0.5rem;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    font: 400 1rem/1.2 $font-default;
+    color: var(--var-white-color);
+    text-align: left;
+    background-color: var(--var-bg-color);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+.container,
+.advantages__container,
+.trial__container,
+.courses__container,
+.help__container,
+.footer__container {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header {
+    position: relative;
+    overflow-x: hidden;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 4rem;
+        }
+    }
+
+    &__nav--list {
+        display: flex;
+        align-items: center;
+        column-gap: 2.5rem;
+    }
+
+    &__nav--item {
+        padding: .5rem;
+        font: 400 1.25rem/1.2 $font-default;
+        line-height: 1.4;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    &__buttons--login {
+        display: inline-block;
+        padding: 0.6875rem 1.5rem;
+        @include bor-r;
+        border: none;
+        font: 500 1rem/140% $font-default;
+        background-image: var(--var-button-color);
+    }
+
+    &__logo {
+        width: 9.75rem;
+
+        img {
+            height: auto;
+        }
+    }
+
+    .section {
+        padding: 1.5rem 0;
+
+        &__container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        &__body {
+            text-align: center;
+        }
+
+        &__image {
+            display: none;
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &__button {
+            display: inline-block;
+            padding: 0.9375rem 1.5rem;
+            border: none;
+            border-radius: 0.75rem;
+            text-transform: uppercase;
+            background-image: var(--var-button-color);
+            font: 600 1.125rem/140% $font-default;
+        }
+    }
+
+    &__body {
+        text-align: center;
+    }
+
+    &__image {
+        display: none;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title {
+        margin: 0 0 0.875rem;
+        font: 700 1.5rem/140% $font-default;
+        text-transform: uppercase;
+
+        &--big {
+            display: block;
+        }
+    }
+
+    &__description {
+        font: 400 .9375rem/140% $font-default;
+    }
+}
+
+.advantages {
+
+    &__1,
+    &__2,
+    &__3 {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    &__title {
+        font: 700 1.5rem/1.3 $font-default;
+        opacity: 0.9;
+    }
+
+    &__description {
+        font: 400 0.9375rem/1.4 $font-default;
+        opacity: 0.7;
+    }
+
+    &__1 .advantages__image {
+        background-image: var(--var-blue-gradient);
+    }
+
+    &__2 .advantages__image {
+        background-image: var(--var-red-gradient);
+    }
+
+    &__3 .advantages__image {
+        background-image: var(--var-purple-gradient);
+    }
+
+    &__image {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+    }
+}
+
+.trial {
+    text-align: center;
+
+    &__title {
+        position: relative;
+        margin-bottom: 3.5rem;
+        font: 700 4rem/1 $font-default;
+        text-align: center;
+        letter-spacing: 0.03em;
+        background: linear-gradient(330.53deg, #D40000 -15.77%, #F76343 28.41%, #FC6F6F 98.47%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        &::before {
+            position: absolute;
+            display: block;
+            right: -1rem;
+            bottom: 0;
+            content: url("../images/trial/3d_rocket.png");
+            width: 7rem;
+            height: 7.0625rem;
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+        margin-bottom: 3.5rem;
+    }
+
+    &__list--item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.125rem;
+        font: 400 1.25rem/1.5rem $font-default;
+
+        img {
+            display: block;
+            width: 1.5rem;
+            height: auto;
+        }
+    }
+
+    &__list--item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__form {
+        position: relative;
+        padding: 1rem .5rem;
+        border-radius: 12px;
+        background-color: #fff;
+
+        &::before {
+            position: absolute;
+            display: block;
+            top: -5.25rem;
+            left: -7.5rem;
+            content: url("../images/trial/3d_goal.png");
+            width: 6.0625rem;
+            height: 5.25rem;
+        }
+
+        &--input {
+
+            input {
+                display: block;
+                width: 100%;
+                height: 48px;
+                padding: .2rem 0 .2rem .5rem;
+                border-radius: 0.5rem;
+                border: 1px solid #D0D0D1;
+                background-color: #fff;
+                font: 400 1rem/1 $font-default;
+                letter-spacing: 0.2px;
+                color: #7D7DAE;
+                opacity: 0.9;
+            }
+        }
+
+        &--error {
+            height: 0;
+            visibility: hidden;
+            text-align: left;
+            color: var(--var-error-color);
+
+            &.show {
+                visibility: visible;
+            }
+        }
+
+        &--button {
+
+            button {
+                display: inline-block;
+                width: 100%;
+                height: auto;
+                padding: 1.5rem 4rem;
+                border-radius: 12px;
+                border: none;
+                text-align: center;
+                color: var(--var-white-color);
+                background-image: var(--var-button-color);
+                font: 700 1.75rem/1 $font-default;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.courses {
+    &__title {
+        margin: 0 0 1rem;
+        font: 700 3.5rem/140% $font-default;
+        opacity: .9;
+    }
+
+    &__description {
+        margin: 0 0 1.5rem;
+        font: 400 1.5rem/150% $font-default;
+        opacity: .7;
+    }
+
+    &__filter {
+        padding: 2px 0;
+        overflow: hidden;
+    }
+
+    ul.courses__list {
+        padding-bottom: 1rem;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        width: 100%;
+        font: 500 .9375rem/1 $font-default;
+        overflow-x: auto;
+    }
+
+    &__item {
+        flex: 0 0 auto;
+        padding: 0.5rem 1rem;
+        border-radius: 80px;
+        background-color: rgba(255, 255, 255, 0.06);
+        color: var(--var-white-color);
+        cursor: pointer;
+        user-select: none;
+
+        &.active {
+            background-image: var(--var-button-color);
+        }
+
+        &:hover:not(.active),
+        &:focus:not(.active) {
+            background-color: rgba(255, 255, 255, 0.16);
+        }
+    }
+
+    .red-gradient {
+        background-image: linear-gradient(330.18deg, #C84E89 -27.91%, #F15F79 101.7%);
+    }
+
+    .blue-gradient {
+        background-image: linear-gradient(329.79deg, #0052D4 -31.21%, #4364F7 18.94%, #6FB1FC 98.47%);
+    }
+
+    .purple-gradient {
+        background-image: linear-gradient(151.57deg, #DA22FF 0%, #9733EE 119.33%);
+    }
+
+    &__card--item {
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: #fff;
+    }
+
+    &__card--image {
+        position: relative;
+        width: auto;
+        height: 170px;
+        margin-bottom: 1.5rem;
+        border-radius: 0.625rem;
+
+        img {
+            display: block;
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+
+    &__card--option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__card--session {
+        display: flex;
+        align-items: center;
+    }
+
+    &__session--text {
+        margin: 0;
+        color: #fff;
+    }
+
+    // &__card--inner {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-between;
+    // }
+
+    &__button--tag {
+        margin-bottom: .5rem;
+        padding: 0.25rem;
+        border-radius: .25rem;
+        border: none;
+        color: #fff;
+        font: 500 0.75rem/1 $font-default;
+        background-image: var(--var-button-color);
+    }
+
+    &__card--title {
+        margin-bottom: 1rem;
+        font: 600 1.5rem/130% $font-default;
+        color: #2E2E46;
+    }
+
+    &__card--description {
+        margin-bottom: 1.5rem;
+        font: 400 .875rem/140% $font-default;
+        color: #69697B;
+        opacity: .9;
+    }
+
+    &__card--mentor {
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+        border-top: 1px solid #D0D0D1;
+        column-gap: .5rem;
+
+        img {
+            width: 40px;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+
+    &__mentor--name {
+        margin-bottom: .25rem;
+        font: 500 0.875rem/1 $font-default;
+        color: #2E2E46;
+    }
+
+    &__mentor--job {
+        font: 400 0.75rem/1 $font-default;
+        color: #69697B;
+        opacity: 0.9;
+    }
+}
+
+.help {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2rem;
+    }
+
+    &__text {
+        max-width: 720px;
+    }
+
+    &__title {
+        margin: 0 0 1rem;
+        font: 700 3.5rem/140% $font-default;
+        opacity: .9;
+    }
+
+    &__description {
+        font: 400 1.5rem/150% $font-default;
+        opacity: .7;
+    }
+
+    &__form--card {
+        padding: 1rem;
+        border-radius: 1.25rem;
+        background-color: #fff;
+
+        img {
+            width: 300px;
+            height: auto;
+            margin: 0 auto 2rem;
+        }
+    }
+
+    &__form--row {
+        display: flex;
+        column-gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__form--column {
+        flex: 0 1 50%;
+    }
+
+    &__form--input {
+        display: block;
+        width: 100%;
+        padding: 1rem 0 1rem 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid #D0D0D1;
+        background-color: #fff;
+        font: 400 1.375rem/1 $font-default;
+        letter-spacing: 0.2px;
+        color: #7D7DAE;
+        opacity: 0.9;
+    }
+
+    &__input--error {
+        display: none;
+    }
+
+    &__form--button {
+        text-align: center;
+
+        button {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            padding: 1.5rem 4rem;
+            border-radius: 12px;
+            border: none;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--var-white-color);
+            background-image: var(--var-button-color);
+            font: 700 1.75rem/1 $font-default;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer {
+    position: relative;
+
+    &__hr {
+        height: 1px;
+        width: 100%;
+        background-color: var(--var-white-color);
+        opacity: .1;
+    }
+
+    &__row {
+        display: flex;
+        padding-top: 4rem;
+        column-gap: 4.5rem;
+    }
+
+    &__company,
+    &__list {
+        flex: 0 1 20%;
+    }
+
+    &__company--name {
+        margin-bottom: 1rem;
+        font: 700 1.625rem/1.9375rem $font-default;
+
+        span {
+            color: #F3573B;
+        }
+    }
+
+    &__description {
+        font: 400 1.125rem/140% $font-default;
+    }
+
+    &__list--item {
+        margin-bottom: .5rem;
+
+        p {
+            font-size: .875rem;
+        }
+
+        .footer__item--heading {
+            margin-bottom: 1.125rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    &__list--title {
+        margin-bottom: 1.5rem;
+        font: 600 1.5rem/1 $font-default;
+    }
+
+    &__list--item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__list--link {
+        font: 400 0.875rem/140% $font-default;
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+
+    &__heading--right {
+        .footer__list:first-child {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
+@media (min-width: 767px) {
+
+    .container,
+    .header .section__container,
+    .trial__container,
+    .courses__container,
+    .footer__container {
+        max-width: 720px;
+    }
+
+    .courses__description,
+    .help__description {
+        margin-bottom: 2rem;
+    }
+
+    .header {
+        .section {
+            display: flex;
+            align-items: center;
+
+            &__content {
+                flex: 0 0 100%;
+            }
+
+            &__container {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 0 1rem;
+            }
+
+            &__body {
+                width: 430px;
+                text-align: left;
+            }
+
+            // h1 {
+            //     margin: 0 0 1rem;
+            //     font: 600 1.375rem/130% $font-default;
+
+            //     span {
+            //         font: 600 2.5rem/130% $font-default;
+            //     }
+            // }
+
+            // &__description {
+            //     row-gap: 0.375rem;
+            //     margin-bottom: 2rem;
+            // }
+
+            // h3 {
+            //     font: 500 1rem/1 $font-default;
+            // }
+
+            &__image {
+                display: block;
+                flex: 0 0 520px;
+                transform: translate(-59%, 0px);
+            }
+
+            &__button {
+                padding: 0.875rem 1.5rem;
+                font: 600 1.0625rem/140% $font-default;
+            }
+        }
+
+        &__img--small {
+            display: none;
+        }
+    }
+
+    .advantages {
+
+        &__1,
+        &__2,
+        &__3 {
+            padding: 2rem 0;
+            text-align: left;
+        }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 2rem;
+            max-width: 680px;
+        }
+
+        &__image {
+            width: 420px;
+            margin: 0;
+        }
+    }
+
+    .trial {
+        &__title {
+            margin-bottom: 2.5rem;
+            font-size: 2.4rem;
+        }
+
+        &__form {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 0.5rem;
+            margin: 0 auto;
+            padding: 1.75rem;
+
+            &--input {
+                input {
+                    width: 390px;
+                    padding: 1rem 0 1rem 1rem;
+                    border-radius: 0.5rem;
+                    border: 1px solid #D0D0D1;
+                    background-color: #fff;
+                    font: 400 1.125rem/1 $font-default;
+                    letter-spacing: 0.2px;
+                    color: #7D7DAE;
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+
+    .courses {
+        ul.courses__list {
+            padding-bottom: 1rem;
+            margin-bottom: .5rem;
+        }
+
+        &__item {
+            padding: 0.75rem 1.125rem;
+        }
+
+        &__card--list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        &__card--item {
+            padding: 1rem;
+            border-radius: 1.25rem;
+            background-color: #fff;
+        }
+    }
+
+    .help__form--card {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container,
+    .header .section__container,
+    .trial__container,
+    .courses__container,
+    .help__container,
+    .footer__container {
+        max-width: 910px;
+    }
+
+    .header .section,
+    .advantages__1,
+    .advantages__2,
+    .advantages__3,
+    .trial,
+    .courses,
+    .help,
+    .footer {
+        padding: 3.5rem 0;
+    }
+
+    .advantages__title,
+    .courses__title,
+    .help__title {
+        margin: 0 0 1rem;
+        font-size: 2.25rem;
+    }
+
+    .header__description,
+    .advantages__description,
+    .trial__list--item,
+    .courses__description,
+    .help__description {
+        font: 400 1.125rem/140% $font-default;
+    }
+
+    .header .section__button,
+    .trial__form--button button,
+    .help__form--button button {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+        line-height: 140%;
+    }
+
+    .header {
+
+        .header__nav {
+            padding-top: 1.5rem;
+        }
+
+        .section__container {
+            max-width: 910px;
+        }
+
+        &__title {
+            margin-bottom: 1.5rem;
+            font-size: 2.125rem;
+
+            &--big {
+                font-size: 2.875rem;
+            }
+        }
+
+        &__description {
+            margin: 0 0 2rem;
+            font-size: 1.125rem;
+        }
+
+        .section__button {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .section__image {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 638px;
+            flex: 0 0 638px;
+            -webkit-transform: translate(-75%, 0px);
+            -ms-transform: translate(-75%, 0px);
+            transform: translate(-75%, 0px);
+        }
+    }
+
+    .trial__form--input input {
+        width: 460px;
+        height: 56px;
+    }
+
+    .courses {
+        &__card--list {
+            gap: 2.4rem;
+        }
+
+        &__card--item {
+            padding: 1.5rem;
+            border-radius: 1.25rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .header .section__container,
+    .trial__container,
+    .courses__container,
+    .help__container,
+    .footer__container {
+        max-width: 1112px;
+    }
+
+    .header {
+        .section__container {
+            max-width: 1112px;
+        }
+
+        .section__body {
+            width: 50%;
+        }
+
+        .section__image {
+            flex: 0 0 50%;
+            transform: translate(-100%, 0px);
+        }
+    }
+
+    .advantages__image {
+        width: 500px;
+    }
+
+    .trial {
+        &__title {
+            font-size: 3.6rem;
+        }
+
+        &__list--item {
+            font-size: 1.125rem;
+            line-height: 1.1875rem;
+        }
+
+        &__form {
+            &::before {
+                left: -9.5rem;
+            }
+        }
+    }
+
+    .courses__card--list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    .container,
+    .header .section__container,
+    .trial__container,
+    .courses__container,
+    .help__container,
+    .footer__container {
+        max-width: 1494px;
+    }
+
+    .header {
+        &__nav {
+            padding-top: 2rem;
+        }
+
+        &__buttons--login {
+            padding: 1rem 2rem;
+            font-size: 1.3125rem;
+        }
+
+        &__title {
+            margin-bottom: 2rem;
+            font-size: 3.5rem;
+
+            &--big {
+                font-size: 4.4375rem;
+            }
+        }
+
+        &__description {
+            margin-bottom: 3.5rem;
+            font-size: 1.625rem;
+        }
+
+        .section__button {
+            padding: 1.5rem 3.5rem;
+            font: 700 1.75rem / 140% $font-default;
+        }
+    }
+
+    .advantages {
+
+        &__1,
+        &__2,
+        &__3 {
+            padding: 5rem 0;
+        }
+
+        &__container {
+            max-width: 1260px;
+        }
+
+        &__text {
+            max-width: 720px;
+        }
+
+        &__title {
+            margin-bottom: 1rem;
+            font: 600 3.5rem/1.4 $font-default;
+        }
+
+        &__description {
+            font: 400 1.5rem/1.5 $font-default;
+        }
+
+        &__image {
+            width: 424px;
+            margin: 0;
+            padding: 1.125rem 2rem;
+        }
+    }
+
+    .trial,
+    .courses,
+    .help,
+    .footer {
+        padding: 5rem 0;
+    }
+
+    .trial {
+        &__title {
+            margin-bottom: 3.5rem;
+            font-size: 4rem;
+
+            &::before {
+                right: 13rem;
+            }
+        }
+
+        &__list--item {
+            font-size: 1.625rem;
+            line-height: 1.9375rem;
+        }
+
+        &__form {
+            padding: 2.5rem;
+
+            &--input {
+                input {
+                    width: 560px;
+                    height: 69px;
+                    font-size: 1.375rem;
+                }
+            }
+        }
+    }
+
+    .courses__item {
+        padding: 1rem 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .courses__card--item {
+        padding: 1.75rem;
+    }
+
+    .help {
+        &__container {
+            max-width: 1260px;
+        }
+    }
+}
+
+@media (max-width: 991.99px) {
+
+    .header .section,
+    .advantages__1,
+    .advantages__2,
+    .advantages__3,
+    .trial,
+    .courses,
+    .help,
+    .footer {
+        padding: 3rem 0;
+    }
+
+    .advantages__title,
+    .courses__title,
+    .help__title {
+        margin: 0 0 1rem;
+        font-size: 1.85rem;
+    }
+
+    .header__description,
+    .advantages__description,
+    .trial__list--item,
+    .courses__description,
+    .help__description {
+        font: 400 1.125rem/140% $font-default;
+    }
+
+    .header .section__button,
+    .trial__form--button button,
+    .help__form--button button {
+        padding: 0.9375rem 2rem;
+        font-size: 1rem;
+        line-height: 140%;
+    }
+
+    .header__title {
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+
+        &--big {
+            font-size: 2.5rem;
+        }
+    }
+
+    .header__description {
+        margin-bottom: 2rem;
+    }
+
+    .header__nav--right {
+        column-gap: 2.5rem;
+    }
+
+    .header__nav--list {
+        column-gap: 1.5rem;
+    }
+
+    .header__nav--item {
+        font-size: 1rem;
+    }
+
+    .help__container,
+    .footer__row {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer__company, .footer__list {
+        margin-bottom: 2rem;
+    }
+
+    .footer__list--title {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+    }
+
+    .footer__list--link {
+        font-size: .9375rem;
+    }
+}
+
+@media (max-width: 766.99px) {
+    .header__nav--right {
+        display: none;
+    }
+
+    .header__description,
+    .advantages__description,
+    .trial__list--item,
+    .courses__description,
+    .help__description {
+        font: 400 0.9375rem/140% $font-default;
+    }
+
+    .header .section__button,
+    .trial__form--button button,
+    .help__form--button button {
+        font-size: .9375rem;
+    }
+
+    .advantages__title,
+    .courses__title,
+    .help__title {
+        margin: 0 0 0.75rem;
+        font-size: 1.25rem;
+    }
+
+    .header .section,
+    .advantages__1,
+    .advantages__2,
+    .advantages__3,
+    .trial,
+    .courses,
+    .help,
+    .footer {
+        padding: 2rem 0;
+    }
+
+    .header {
+        &__logo {
+            width: 6rem;
+        }
+
+        &__nav {
+            padding-top: .5rem;
+        }
+
+        &__description {
+            max-width: 320px;
+            margin: 0 auto 1rem;
+        }
+    }
+
+    .advantages__2 .advantages__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .advantages__image {
+            order: 0;
+        }
+
+        .advantages__text {
+            order: 13;
+        }
+    }
+
+    .advantages__description {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .advantages__image {
+        width: 120px;
+        margin: 0 auto 1rem;
+    }
+
+    .trial__advantages {
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+
+    .trial__title {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .trial__form {
+        padding: 1rem;
+        margin: 0 1rem;
+    }
+
+    .trial__list,
+    .trial__list--item {
+        margin-bottom: .5rem;
+    }
+
+    .trial__form--input,
+    .courses__card--description {
+        margin-bottom: .5rem;
+    }
+
+    .trial__form--button button {
+        width: auto;
+    }
+
+    .trial__form--button button,
+    .help__form--button button {
+        padding: 1rem 1.5rem;
+    }
+
+    .courses {
+        &__card--item {
+            margin-bottom: 1rem;
+            padding: .75rem;
+        }
+
+        &__card--image {
+            height: 120px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .help {
+        &__form--card {
+            padding: .75rem;
+            border-radius: 0.75rem;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        &__form--card img {
+            width: 120px;
+        }
+
+        &__description {
+            margin-bottom: 1rem;
+        }
+
+        &__form--row {
+            margin-bottom: 1rem;
+        }
+
+        &__form--input {
+            height: auto;
+            padding: 0.75rem 1rem;
+            border-radius: .4rem;
+            font-size: 1rem;
+        }
+    }
+
+    .footer__row {
+        padding-top: 2.5rem;
+    }
+
+    .footer__company,
+    .footer__list {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer__company--name {
+        margin-bottom: .5rem;
+        font: 700 1.25rem/1.9375rem $font-default;
+    }
+
+    .footer__description {
+        font-size: .875rem;
+    }
+
+    .courses__card--title,
+    .footer__list--title {
+        margin-bottom: 1rem;
+        font-size: 1.125rem;
+    }
+
+    .footer__list--link {
+        font-size: .75rem;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .advantages__1,
+    .advantages__2,
+    .advantages__3,
+    .trial,
+    .courses,
+    .help,
+    .footer {
+        padding: 1.5rem 0;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .header__description,
+    .advantages__description,
+    .trial__list--item,
+    .courses__description,
+    .help__description {
+        font: 400 0.875rem/140% $font-default;
+    }
+
+    .courses__item,
+    .header .section__button,
+    .trial__form--button button,
+    .help__form--button button {
+        font-size: .875rem;
+    }
+
+    .advantages__title,
+    .courses__title,
+    .help__title {
+        margin: 0 0 0.625rem;
+        font-size: 1.125rem;
+    }
+
+    .trial__form {
+        margin: 0;
+    }
+
+    .help__form--row {
+        column-gap: .25rem;
+    }
+
+    .help__form--input {
+        padding: 0.75rem;
+        border-radius: 0.25rem;
+        font-size: .9375rem;
+    }
+}
