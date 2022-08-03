@@ -517,10 +517,18 @@ body {
         border-radius: 0.5rem;
         border: 1px solid #D0D0D1;
         background-color: #fff;
-        font: 400 1.375rem/1 $font-default;
-        letter-spacing: 0.2px;
-        color: #7D7DAE;
+        font: 500 1.375rem/1 $font-default;
+        color: #1f1f47;
         opacity: 0.9;
+
+        &::placeholder {
+            font-weight: 400;
+            color: rgba(31, 31, 71, 0.6);
+        }
+    }
+
+    textarea.help__form--input {
+        line-height: 130%;
     }
 
     &__input--error {
@@ -1330,6 +1338,17 @@ body {
     }
 }
 
+@media (max-width: 420px) {
+    .header__title {
+        margin-bottom: 1.25rem;
+        font-size: 1.5rem;
+    
+        &--big {
+            font-size: 2.25rem;
+        }
+    }
+}
+
 @media (max-width: 320px) {
 
     .header__description,
@@ -1352,6 +1371,15 @@ body {
     .help__title {
         margin: 0 0 0.625rem;
         font-size: 1.125rem;
+    }
+
+    .header__title {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+    
+        &--big {
+            font-size: 2rem;
+        }
     }
 
     .trial__form {
