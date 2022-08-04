@@ -437,6 +437,7 @@ select {
   --var-blue-gradient: linear-gradient(329.79deg, #0052D4 -31.21%, #4364F7 18.94%, #6FB1FC 98.47%);
   --var-purple-gradient: linear-gradient(151.57deg, #DA22FF 0%, #9733EE 119.33%);
   --var-button-color: linear-gradient(330.53deg, #D40000 -15.77%, #F76343 28.41%, #FC6F6F 98.47%);
+  --var-button-hover: linear-gradient(330.53deg, #878787 -15.77%, #fc522d 28.41%, #ff4646 98.47%);
 }
 
 body {
@@ -511,6 +512,9 @@ body {
   font: 400 1.25rem/1.2 "Inter", sans-serif;
   line-height: 1.4;
   opacity: 0.8;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .header__nav--item:hover {
@@ -524,6 +528,13 @@ body {
   border: none;
   font: 500 1rem/140% "Inter", sans-serif;
   background-image: var(--var-button-color);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.header__buttons--login:hover {
+  background-image: var(--var-button-hover);
 }
 
 .header__logo {
@@ -566,6 +577,13 @@ body {
   text-transform: uppercase;
   background-image: var(--var-button-color);
   font: 600 1.125rem/140% "Inter", sans-serif;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.header .section__button:hover {
+  background-image: var(--var-button-hover);
 }
 
 .header__body {
@@ -748,6 +766,13 @@ body {
   background-image: var(--var-button-color);
   font: 700 1.75rem/1 "Inter", sans-serif;
   cursor: pointer;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.trial__form--button button:hover {
+  background-image: var(--var-button-hover);
 }
 
 .courses__title {
@@ -799,6 +824,9 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .courses__item.active {
@@ -1041,6 +1069,13 @@ body {
   background-image: var(--var-button-color);
   font: 700 1.75rem/1 "Inter", sans-serif;
   cursor: pointer;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.help__form--button button:hover {
+  background-image: var(--var-button-hover);
 }
 
 .footer {
@@ -1107,6 +1142,9 @@ body {
 
 .footer__list--link {
   font: 400 0.875rem/140% "Inter", sans-serif;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
 }
 
 .footer__list--link:hover {

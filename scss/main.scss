@@ -12,6 +12,7 @@ sans-serif;
     --var-blue-gradient: linear-gradient(329.79deg, #0052D4 -31.21%, #4364F7 18.94%, #6FB1FC 98.47%);
     --var-purple-gradient: linear-gradient(151.57deg, #DA22FF 0%, #9733EE 119.33%);
     --var-button-color: linear-gradient(330.53deg, #D40000 -15.77%, #F76343 28.41%, #FC6F6F 98.47%);
+    --var-button-hover: linear-gradient(330.53deg, #878787 -15.77%, #fc522d 28.41%, #ff4646 98.47%);
 }
 
 @mixin bor-r {
@@ -71,6 +72,7 @@ body {
         font: 400 1.25rem/1.2 $font-default;
         line-height: 1.4;
         opacity: 0.8;
+        transition: all .3s ease;
 
         &:hover {
             opacity: .6;
@@ -84,6 +86,11 @@ body {
         border: none;
         font: 500 1rem/140% $font-default;
         background-image: var(--var-button-color);
+        transition: all .3s ease;
+
+        &:hover {
+            background-image: var(--var-button-hover);
+        }
     }
 
     &__logo {
@@ -125,6 +132,10 @@ body {
             text-transform: uppercase;
             background-image: var(--var-button-color);
             font: 600 1.125rem/140% $font-default;
+            transition: all .3s ease;
+            &:hover {
+                background-image: var(--var-button-hover);
+            }
         }
     }
 
@@ -304,6 +315,10 @@ body {
                 background-image: var(--var-button-color);
                 font: 700 1.75rem/1 $font-default;
                 cursor: pointer;
+                transition: all .3s ease;
+                &:hover {
+                    background-image: var(--var-button-hover);
+                }
             }
         }
     }
@@ -349,6 +364,7 @@ body {
         color: var(--var-white-color);
         cursor: pointer;
         user-select: none;
+        transition: all .3s ease;
 
         &.active {
             background-image: var(--var-button-color);
@@ -551,6 +567,11 @@ body {
             background-image: var(--var-button-color);
             font: 700 1.75rem/1 $font-default;
             cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover {
+                background-image: var(--var-button-hover);
+            }
         }
     }
 }
@@ -614,6 +635,7 @@ body {
 
     &__list--link {
         font: 400 0.875rem/140% $font-default;
+        transition: all .3s ease;
 
         &:hover {
             opacity: .6;
